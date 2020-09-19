@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+ <head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Web Links</title>
+    <link rel="STYLESHEET" href="css/default.css" type="text/css">
+	<script src="js/JStoHTML_String_Construct.js"></script>
+	<script src="js/JStoHTML_HTML_gridDivTable.js"></script>
+	<script src="js/JStoHTML_HTML_gridDivTable_construct.js"></script>
+	<!-- <script src="js/JSGrid_Style.js"></script> -->
+	<!-- <script src="js/JSGrid.js"></script> -->
+	
+	<script>
+		divC5= new JStoHTML_HTML_gridDivTable_construct();
+		divC5.addDivTableRow("F1");
+		divC5.addDivTableTitle("clase1","Nombre");
+		divC5.addDivTableTitle("clase1","Apellido");
+		divC5.addDivTableEnd();
+
+		divC5.addDivTableRow("F1");
+		divC5.addDivTableCol("clase1","Nombre");
+		divC5.addDivTableCol("clase1","Apellido");
+		divC5.addDivTableCol();
+
+
+
+
+
+	</script>
+	<style id="miStyle"></style>
+	</head>
+	
+	<body>
+	 Prueba
+	<!--<div id="content"></div> 
+	<div id="content3"></div>-->
+	<div id="content4"></div>
+	<script>
+		divC5.setHtmlToTag("content4");
+		//styleD.setHtmlToTag("miStyle");
+	</script>
+	</body>
+</html>
