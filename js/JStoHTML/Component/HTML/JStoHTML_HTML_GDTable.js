@@ -1,27 +1,23 @@
 "use strict";
-class JStoHTML_HTML_gridDivTable{
+class JStoHTML_HTML_GDTable extends JStoHTML_strConstruct{
     
-    constructor(){
-        
-    };
-
-    getNewDivTable(className=""){       
+    getNewTable(className=""){       
         return "<div class="+className+">";	
     }
 
-    getDivTableRow(text=""){
+    getTableRow(text=""){
         return "<!--"+text+" -->";	
     }
 
-    getDivTableTitle(className="",text=""){
+    getTableTitle(className="",text=""){
         return "<header class=\""+className+"\" >"+text+"</header>";			
     }
 
-    getDivTableCol(className="",text=""){
+    getTableCol(className="",text=""){
         return "<div class=\""+className+"\" >"+text+"</div>";	
     }
 
-    getDivTableEnd(){
+    getTableEnd(){
         return "</div>";	
     }
 }

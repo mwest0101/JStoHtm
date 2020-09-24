@@ -1,6 +1,6 @@
 "use strict";
 
-class JStoHTML_String_Construct {
+class JStoHTML_strConstruct {
 
     constructor(){
         this.returnStr = "";
@@ -14,14 +14,18 @@ class JStoHTML_String_Construct {
     
     getString(){
         return this.returnStr;
-    }
+    } 
     
+    add(text){
+        this.addString(text);
+    }
+
     addString(text){
-        this.setString(this.getReturnStr()+text);
+        this.setString(this.getString()+text);
     }
 
     setHtmlToTag(contentId="") {
-        document.getElementById(contentId).innerHTML = this.getRetStr();    
+        document.getElementById(contentId).innerHTML = this.getString();    
     }
 
     replaceString(searchSourceText,valToReplace){
