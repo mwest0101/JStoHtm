@@ -4,7 +4,7 @@ class JStoHTML_HTML_GDTable_Construct extends JStoHTML_HTML_GDTable{
 
     constructor(){
         super();
-        this.addNewTable();
+        this.addTable();
     }
     
     addTable(className=""){       
