@@ -1,31 +1,60 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
  <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Web Links</title>
 	<link rel="STYLESHEET" href="css/default.css" type="text/css">
+	<script src="js/JStoHTML/Functions/JSH_functions.js"></script>
+	<script src="js/JStoHTML/Functions/JSH_strConstruct.js"></script>
+	<script src="js/JStoHTML/Functions/JSH_objectsDriver.js"></script>
+	<script src="js/JStoHTML/Components/JSH_components.js"></script>
+	<script src="js/JStoHTML/Components/GDTable/JSH_GDTable_Properties.js"></script>
+	<script src="js/JStoHTML/Components/GDTable/JSH_GDTable_Interface.js"></script>
+	<script src="js/JStoHTML/Components/GDTable/JSH_GDTable_HTML.js"></script>
 	
-	<script src="js/JStoHTML/Functions/JStoHTML_strConstruct.js"></script>
-	<script src="js/JStoHTML/Functions/JStoHTML_Components.js"></script>
-	<script src="js/JStoHTML/Component/HTML/JStoHTML_HTML_gdTable.js"></script>
-	<script src="js/JStoHTML/Component/HTML/JStoHTML_HTML_gdTable_construct.js"></script>
-	<!-- <script src="js/JSGrid_Style.js"></script> -->
 	<script src="js/JStoHTML/JStoHTML.js"></script>
-	
+		
 	<script>
 		divC5= new JStoHTML();
-		table=divC5.newGDTable();
-		table.addRow();
+		table=divC5.newGDTable("principal");		
 		table.addCol("a","a");
 		table.addCol("b","b");
-		table.addCol("c","c");
+		table.addCol("c","c").addTable("principal2").addRow().addCol("test1").addCol("test2");
 		table.addEnd();
-
+		
+		
+		
 		divC5.add(table);
+		
+	
+		// divC5.getAllObjToString();
+		console.log(divC5.getResulString());
+		// console.log("-------------------------------------------");
 
-		divC5.getAllObjToString();
 
+		 /* console.log(divC5); */
+		
+		/*
+			divC5= new JStoHTML();
+			table=divC5.newGDTable("principal");
+			table.addRow().bold();
+			table.addCol("a","a").bold();
+			table.addCol("b","b").addStyle("text-aling:left");
+			table.addCol("c","c");
+			table.addEnd();
+
+			divC5.add(table);
+			divC5.addImage("auto.jpg");
+			divC5.addRectangle("rectangle").addText("hola");
+		*/
+		
+
+	/*	console.log(isObject("test"));*/
+	
+
+	
+	/* console.log(isInstanteOf(divC5,JStoHTML)); */
 
 	</script>
 	<style id="miStyle"></style>
